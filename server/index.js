@@ -28,7 +28,7 @@ app.post("/mail", (req, res) => {
 
   const mailData = {
     from: "thelostprime12@gmail.com", // sender address
-    to: "tanishgarg97027@gmail.com", // list of receivers
+    to: "info@redpositive.in", // list of receivers
     subject: "Message from Contact Form",
     html: `<span><b>Name :</b> ${queryObj.name}</span><br>
            <span><b>Email :</b> ${queryObj.email}</span><br>
