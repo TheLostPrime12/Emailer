@@ -20,14 +20,14 @@ app.post("/mail", (req, res) => {
     port: 465, // true for 465, false for other ports
     host: "smtp.gmail.com",
     auth: {
-      user: "",
-      pass: "",
+      user: process.env.USERNAME,
+      pass: process.env.PASSWORD,
     },
     secure: true,
   });
 
   const mailData = {
-    from: "", // sender address
+    from: process.env.USERNAME, // sender address
     to: "tanishgarg97027@gmail.com", // list of receivers
     subject: "Message from Contact Form",
     html: `<span><b>Name :</b> ${queryObj.name}</span><br>
