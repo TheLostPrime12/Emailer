@@ -30,10 +30,10 @@ app.post("/mail", (req, res) => {
     from: "thelostprime12@gmail.com", // sender address
     to: "tanishgarg97027@gmail.com", // list of receivers
     subject: "Message from Contact Form",
-    html: `<span>Name : ${queryObj.name}</span><br>
-           <span>Email : ${queryObj.email}</span><br>
-           <span>Mobile Number : ${queryObj.mobile}</span><br>
-           <p>Message : <br>${queryObj.message}</p>`,
+    html: `<span><b>Name :</b> ${queryObj.name}</span><br>
+           <span><b>Email :</b> ${queryObj.email}</span><br>
+           <span><b>Mobile Number :</b> ${queryObj.mobile}</span><br>
+           <p><b>Message :</b> <br>${queryObj.message}</p>`,
   };
   transporter.sendMail(mailData, function (err, info) {
     if (err) console.log(err);
